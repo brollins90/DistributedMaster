@@ -1,0 +1,20 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "DistributedClient Console Application",
+  "authors": [ "brollins" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+    "DistributedMaster": ""
+  },
+
+  "commands": {
+    "DistributedClient": "DistributedClient"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}
