@@ -2,9 +2,11 @@
 {
     public class LocalClientWorkerFactory
     {
+        RemoteClientWorkerFactory _remoteFactory = new RemoteClientWorkerFactory();
+
         public ClientWorker Create()
         {
-            return new ClientWorker(new LocalJobProcessingClient());
+            return _remoteFactory.Create();
         }
     }
 }

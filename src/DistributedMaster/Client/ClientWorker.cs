@@ -20,6 +20,12 @@
         public async Task Start()
         {
             var work = await _jobProcessingClient.GetWork(_clientId);
+            if (work == null)
+            {
+                await SubmitJob();
+            }
+            work = await _jobProcessingClient.GetWork(_clientId);
+
             while (work != null)
             {
                 await BeginWork(work);
@@ -45,10 +51,10 @@
                 Success = suceeded
             },
             _clientId);
-            if (putResult == 200 || putResult == 201 || putResult == 204)
-            {
-                //BeginWork(workItem);
-            }
+            //if (putResult == 200 || putResult == 201 || putResult == 204)
+            //{
+            //    //BeginWork(workItem);
+            //}
         }
 
         public async Task<ProcessingJobViewModel> SubmitJob()

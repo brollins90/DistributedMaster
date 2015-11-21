@@ -45,7 +45,17 @@
                         {
                             if (work.Status.Equals("NotStarted"))
                             {
-                                return work;
+                                var putResult = await PutObj(work.RequestWorkUrl, new ProcessingJobWorkConfirmViewModel
+                                {
+                                    ClientId = clientId,
+                                    JobId = work.JobId,
+                                    WorkId = work.WorkId
+                                },
+                                clientId);
+                                if (putResult == 200 || putResult == 201 || putResult == 204)
+                                {
+                                    return work;
+                                }
                             }
                         }
                     }
