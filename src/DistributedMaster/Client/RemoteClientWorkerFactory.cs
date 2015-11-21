@@ -1,9 +1,6 @@
 ﻿namespace DistributedMaster.Client
 {
-    using System;
-    using System.Collections.Generic;
-
-    public class ClientWorkerFactory
+    public class RemoteClientWorkerFactory
     {
         string endpointHost = "http://localhost.fiddler:5000/";
         string endpointPath = "/api/processingjob";
@@ -12,7 +9,7 @@
 
         public ClientWorker Create()
         {
-            return new ClientWorker(endpointHost, endpointPath, proxyHost, proxyPort);
+            return new ClientWorker(new RemoteJobProcessingClient(endpointHost, endpointPath, proxyHost, proxyPort));
         }
     }
 }

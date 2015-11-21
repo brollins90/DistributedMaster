@@ -7,7 +7,7 @@
 
         public void Main(string[] args)
         {
-            ClientWorker worker = new ClientWorkerFactory().Create();
+            ClientWorker worker = new RemoteClientWorkerFactory().Create();
             worker.Start().Wait();
         }
     }

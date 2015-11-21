@@ -7,7 +7,7 @@
     [Route("[controller]")]
     public class HomeController : Controller
     {
-        ClientWorkerFactory factory = new ClientWorkerFactory();
+        RemoteClientWorkerFactory factory = new RemoteClientWorkerFactory();
         List<ClientWorker> workers = new List<ClientWorker>();
 
         [HttpGet]

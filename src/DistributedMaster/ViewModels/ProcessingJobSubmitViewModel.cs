@@ -1,4 +1,4 @@
-﻿namespace DistributedMaster.Models
+﻿namespace DistributedMaster.ViewModels
 {
     using ViewModels;
     using System;
@@ -8,6 +8,6 @@
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public ICollection<ProcessingJobWorkViewModel> Work { get; set; }
+        public IList<ProcessingJobWorkViewModel> Work { get; set; }
     }
 }

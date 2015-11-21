@@ -1,5 +1,6 @@
 ﻿namespace DistributedMaster.Controllers
 {
+    using ViewModels;
     using Microsoft.AspNet.Mvc;
     using Microsoft.Framework.Logging;
     using Models;

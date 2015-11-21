@@ -1,4 +1,4 @@
-﻿namespace DistributedMaster.Models
+﻿namespace DistributedMaster.ViewModels
 {
     using System;
 
